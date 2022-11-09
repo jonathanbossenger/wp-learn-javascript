@@ -4,5 +4,7 @@
   "name": "wp-learn-javascript/javascript-block",
   "category": "layout",
   "icon": "media-code",
-  "editorScript": "file:./block.js"
+  "editorScript": "file:./block.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
 }

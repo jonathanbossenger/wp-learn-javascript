@@ -1,12 +1,14 @@
-( function ( blocks, element ) {
+( function ( blocks, element, blockEditor ) {
     var el = element.createElement;
 
     blocks.registerBlockType( 'wp-learn-javascript/javascript-block', {
         edit: function () {
-            return el( 'p', {}, 'Hello JavaScript World (from the editor).' );
+            var blockProps = blockEditor.useBlockProps();
+            return el( 'p', blockProps, 'Hello JavaScript World (from the editor).' );
         },
         save: function () {
-            return el( 'p', {}, 'Hello JavaScript World (from the frontend).' );
+            var blockProps = blockEditor.useBlockProps.save();
+            return el( 'p', blockProps, 'Hello JavaScript World (from the frontend).' );
         },
     } );
-} )( window.wp.blocks, window.wp.element );
+} )( window.wp.blocks, window.wp.element, window.wp.blockEditor );
