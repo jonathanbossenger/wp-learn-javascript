@@ -1,0 +1,8 @@
+{
+  "apiVersion": 2,
+  "title": "WP Learn: Javascript Block",
+  "name": "wp-learn-javascript/javascript-block",
+  "category": "layout",
+  "icon": "media-code",
+  "editorScript": "file:./block.js"
+}
