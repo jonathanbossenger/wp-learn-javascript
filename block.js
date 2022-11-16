@@ -1,14 +1,32 @@
 ( function ( blocks, element, blockEditor ) {
     var el = element.createElement;
+    var RichText = blockEditor.RichText;
+    var useBlockProps = blockEditor.useBlockProps;
 
     blocks.registerBlockType( 'wp-learn-javascript/javascript-block', {
-        edit: function () {
-            var blockProps = blockEditor.useBlockProps();
-            return el( 'p', blockProps, 'Hello JavaScript World (from the editor).' );
+        edit: function ( { attributes, setAttributes } ) {
+            var blockProps = useBlockProps();
+            function onChangeContent( newContent ) {
+                setAttributes( { content: newContent } );
+            }
+            return el(
+                RichText,
+                Object.assign( blockProps, {
+                    tagName: 'p',
+                    onChange: onChangeContent,
+                    value: attributes.content,
+                } )
+            );
         },
-        save: function () {
-            var blockProps = blockEditor.useBlockProps.save();
-            return el( 'p', blockProps, 'Hello JavaScript World (from the frontend).' );
+        save: function (props) {
+            var blockProps = useBlockProps.save();
+            return el(
+                RichText.Content,
+                Object.assign( blockProps, {
+                    tagName: 'p',
+                    value: props.attributes.content,
+                } )
+            );
         },
     } );
 } )( window.wp.blocks, window.wp.element, window.wp.blockEditor );

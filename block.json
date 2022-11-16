@@ -2,6 +2,14 @@
   "apiVersion": 2,
   "title": "WP Learn: Javascript Block",
   "name": "wp-learn-javascript/javascript-block",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "textarea",
+      "default": "Hello JavaScript Block"
+    }
+  },
   "category": "layout",
   "icon": "media-code",
   "editorScript": "file:./block.js",
