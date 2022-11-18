@@ -6,7 +6,7 @@
     "content": {
       "type": "string",
       "source": "html",
-      "selector": "textarea",
+      "selector": "p",
       "default": "Hello JavaScript Block"
     }
   },
