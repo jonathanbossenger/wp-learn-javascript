@@ -8,7 +8,7 @@
 
 Block attributes are defined in the block metadata in the `block.json` file, and then passed to the `edit` and `save` functions. 
 
-By default, the `edit` and `save` functions receive a number of properties through an object argument, and the attributes are part of that argument. To access the object, you add a function parameter to your `edit` or `save` function. Typically the parameter is called `props`, but you can call it anything you want.
+By default, the `edit` and `save` functions receive a number of properties through an object argument, and the attributes are part of that argument. To access the object, you add a function parameter to your `edit` or `save` function. Typically, the parameter is called `props`, but you can call it anything you want.
 
 ```js
 edit: function ( props ) {
@@ -101,7 +101,7 @@ return el(
 
 ### Using the block attribute
 
-Now that you have the RichText compenent in place in your edit funciton, you can replace the value with the value of the content attribute. Before you to that, it would be a good idea to update the attribute to have a default value, which you can do by assinging a "default" item in the attribute in block.json
+Now that you have the RichText component in place in your edit function, you can replace the value with the value of the content attribute. Before you to that, it would be a good idea to update the attribute to have a default value, which you can do by assigning a "default" item in the attribute in block.json
 
 ```json
   "attributes": {
