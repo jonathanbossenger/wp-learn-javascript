@@ -4,3 +4,7 @@
     color: white;
     padding: 20px;
 }
+
+.wp-block-wp-learn-javascript-javascript-block p.block-editor-rich-text__editable {
+    margin: 0;
+}

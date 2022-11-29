@@ -6,23 +6,27 @@
     blocks.registerBlockType( 'wp-learn-javascript/javascript-block', {
         edit: function ( { attributes, setAttributes } ) {
             var blockProps = useBlockProps();
+
             function onChangeContent( newContent ) {
                 setAttributes( { content: newContent } );
             }
+
             return el(
-                RichText,
-                Object.assign( blockProps, {
+                'div',
+                blockProps,
+                el( RichText, {
                     tagName: 'p',
                     onChange: onChangeContent,
                     value: attributes.content,
                 } )
-            );
+            )
         },
         save: function (props) {
             var blockProps = useBlockProps.save();
             return el(
-                RichText.Content,
-                Object.assign( blockProps, {
+                'div',
+                blockProps,
+                el( RichText.Content, {
                     tagName: 'p',
                     value: props.attributes.content,
                 } )
