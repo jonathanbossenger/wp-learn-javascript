@@ -3,6 +3,9 @@
     var RichText = blockEditor.RichText;
     var useBlockProps = blockEditor.useBlockProps;
 
+    var BlockControls = blockEditor.BlockControls;
+    var AlignmentToolbar = blockEditor.AlignmentToolbar;
+
     blocks.registerBlockType( 'wp-learn-javascript/javascript-block', {
         edit: function ( { attributes, setAttributes } ) {
             var blockProps = useBlockProps();
@@ -14,6 +17,14 @@
             return el(
                 'div',
                 blockProps,
+                el(
+                    BlockControls,
+                    { key: 'controls' },
+                    el(
+                        AlignmentToolbar,
+                        {}
+                    )
+                ),
                 el( RichText, {
                     tagName: 'p',
                     onChange: onChangeContent,
