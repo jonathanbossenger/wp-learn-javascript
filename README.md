@@ -15,3 +15,6 @@ https://github.com/jonathanbossenger/wp-learn-javascript/tree/main/02-adding-sty
 
 ## Part 3: Attributes and Editable Content with RichText
 https://github.com/jonathanbossenger/wp-learn-javascript/tree/main/03-adding-attributes-and-richtext
+
+## Part 4: Introducing BlockControls and InspectorControls
+https://github.com/jonathanbossenger/wp-learn-javascript/tree/main/04-block-controls
