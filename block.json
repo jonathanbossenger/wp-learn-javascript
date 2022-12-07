@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "title": "WP Learn: Javascript Block",
   "name": "wp-learn-javascript/javascript-block",
@@ -9,10 +10,22 @@
       "selector": "p",
       "default": "Hello JavaScript Block"
     },
-    "alignment": {
+    "linkColor": {
       "type": "string",
-      "default": "none"
+      "default": "pale-pink"
     }
+  },
+  "supports": {
+    "align": true,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "spacing": {
+      "margin": true
+    },
+    "className": false
   },
   "category": "layout",
   "icon": "media-code",
