@@ -10,18 +10,14 @@
       "selector": "p",
       "default": "Hello JavaScript Block"
     },
-    "linkColor": {
+    "backgroundColor": {
       "type": "string",
       "default": "pale-pink"
     }
   },
   "supports": {
     "align": true,
-    "color": {
-      "text": true,
-      "background": true,
-      "link": true
-    },
+    "color": true,
     "spacing": {
       "margin": true
     },
