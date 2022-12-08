@@ -12,7 +12,6 @@
             function onChangeContent( newContent ) {
                 setAttributes( { content: newContent } );
             }
-
             function onChangeAlignment( newAlignment ) {
                 setAttributes( { alignment: newAlignment === undefined ? 'none' : newAlignment } );
             }

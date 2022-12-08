@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WP Learn Javascript: Basic Block
- * Version: 0.0.3
+ * Version: 0.0.4
  */
 
 add_action( 'init', 'wp_learn_javascript_register_block' );
